@@ -1,0 +1,47 @@
+body {
+
+    background-color: darkblue;
+
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2Vhc2NhcGV8ZW58MHx8MHx8&w=1000&q=80");
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    height: 400px;
+
+    background: linear-gradient(red, yellow);
+
+}
+
+.box {
+
+    width: 400px;
+
+    height: 400px;
+
+    background-color: rgb(255, 0, 166);
+
+    animation: moveBox 4s infinite;
+
+}
+
+/* keyframe is a time line with from --->to and it is used to animate the box from left to right. The box will move from left to right in 4 seconds and will repeat infinitely. */
+
+@keyframes moveBox {
+
+    from {
+
+        margin-left: 0px
+    }
+
+    to {
+
+        margin-left: 400px
+    }
+
+}
