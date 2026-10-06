@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-          <title>ZOO</title>
+          <title>ZOO ANIMALS</title>
+          <style> 
+            #zoo{
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                  color: white;
+                  background-color: black;
+
+            }
+            .zone2{
+              background-color: #ffffff;
+                color: black;
+            }
+            .zone4{
+              background-color: #ffffff;
+                color: black;
+            }
+                
+          </style>
     </head>
     <body>
            <h1>My Zoo</h1>
@@ -9,10 +26,10 @@
            <!-- DOM tree ;zoo is the parint element node.
            zone divs are child elements nodes. -->
            <div id="zoo">
-              <div class="zone">zone 1 <span id="zone1"></span></div>
-            <div class="zone">zone 2 <span id="zone2"></span></div>
-            <div class="zone">zone 3 <span id="zone3"></span></div>
-            <div class="zone">zone 4 <span id="zone4"></span></div>
+              <div class="zone1">zone 1 <span id="zone1"></span></div>
+            <div class="zone2">zone 2 <span id="zone2"></span></div>
+            <div class="zone3">zone 3 <span id="zone3"></span></div>
+            <div class="zone4">zone 4 <span id="zone4"></span></div>
  
            </div>
            <br>
@@ -20,10 +37,10 @@
            <p id="zoo-status"></p>
            <script>
              function openzoo(){
-                document.getElementById("zone1").innerHTML="lionzone1";
-                document.getElementById("zone2").innerHTML="reptileszone2";
-                document.getElementById("zone3").innerHTML="birdszone3";
-                document.getElementById("zone4").innerHTML="seaanimalszone4";
+                document.getElementById("zone1").innerHTML="lion";
+                document.getElementById("zone2").innerHTML="reptiles";
+                document.getElementById("zone3").innerHTML="birds";
+                document.getElementById("zone4").innerHTML="seaanimals";
              }
 
            </script>

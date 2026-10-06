@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>planet information</h1>
+        <p id="result"></p>
+        <script>
+            class Planet{
+
+                constructor(name,fact){
+                    this.name=name;
+                    this.fact=fact;
+                }
+                describes(){
+                    return this.name+";"+this.fact;
+                }
+            }
+            let p1=new Planet("earth","the only planet with life");
+            let p2 = new Planet("mars", "the only planet with life");
+
+            document.getElementById("result").innerHTML=p1.describes()
+        </script>
+    </body>
+</html>
