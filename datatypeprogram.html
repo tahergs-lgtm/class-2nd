@@ -11,13 +11,20 @@
                 <div class="card-body">
                     <h3 class="card-titel">what type is it?</h3>
                     <button class="btn btn-warning" onclick="checkTypes()">reveal the types</button>
-                    <div id="typeresult"></div>
+                    <div id="typeresult" class="box p-3 mt-3 rounded ">press the button to reveal the screct typs </div>
+                      <input id="divIn" class="form-control mb-2" placeholder="divide 100 by this">
                 </div>
             </div>
         </div>
+        
         <script>
             function checkTypes(){
-                document.getElementById()
+                document.getElementById("typeresult").innerText=typeof String(42) +"\n"+typeof "taha";
+                  var n=document.getElementById("divin").value;
+                  if (n===""){
+                               throw "that is not a number";
+
+                  }
             }
         </script>
     </body>
