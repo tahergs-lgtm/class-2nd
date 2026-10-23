@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>
+            Lucky Draw
+        </h1>
+        <p>enter your name and guess the number to win </p>
+        <input type="text" id="name" placeholder="your name" required><br>
+        <p id="massg-name"></p>
+        <input type="number" id="guess" placeholder="guess the number 1 to 5" min="1" max="5" required><br>
+        <p id="massg-guess"></p>
+        <button onclick="checkForm()">try my luck</button>
+        <p id="result"></p>
+        <p id="timmer"></p>
+
+        <script>
+            var seconds=0;
+            setInterval(function(){
+                                    seconds=seconds+1;
+                                    document.getElementById("timmer").textContent="you have been here for "+seconds+ "seconds";
+            },1000);
+            
+            function checkForm(){
+
+                 var name=document.getElementById("name").value;
+                 var guess=document.getElementById("guess").value;
+            }
+        </script>
+    </body>
+</html>

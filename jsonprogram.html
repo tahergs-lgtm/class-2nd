@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>my delivery tracker</h1>
+        <button onclick="saveorder()">Save ordre</button>
+        <button onclick="startDelivery">start delivery</button>
+        <div>JSON DE<span id="json-text"></span></div>
+        <div>loaded item<span id="loaded-item"></span></div>
+        <div>loaded price<span id="loaded-price"></span></div>
+
+        <script>
+            let order ={
+                         item:"pizza",
+                         price:5,
+                         shop:"my snack shop"
+            };
+            function saveorder(){
+                let jsontext=JSON.stringify(order);
+                let loadedorder=JSON.parse(jsontext);
+               
+                document.getElementById("json-text").innerHTML = jsontext;
+                document.getElementById("loaded-item").innerHTML = loadedorder.item;
+                document.getElementById("loaded-price").innerHTML = loadedorder.price;
+            }
+
+            function delay(ms){
+                return new Promise(function (resolve) {
+                    setTimeout(resolve, ms);
+            });
+        }   
+        </script>
+    </body>
+</html>
