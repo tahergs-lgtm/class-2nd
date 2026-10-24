@@ -10,7 +10,7 @@
         <p>enter your name and guess the number to win </p>
         <input type="text" id="name" placeholder="your name" required><br>
         <p id="massg-name"></p>
-        <input type="number" id="guess" placeholder="guess the number 1 to 5" min="1" max="5" required><br>
+        <input type="number" id="guess" placeholder="guess the number 1 to 5" min="1" max="10" required><br>
         <p id="massg-guess"></p>
         <button onclick="checkForm()">try my luck</button>
         <p id="result"></p>
@@ -24,9 +24,45 @@
             },1000);
             
             function checkForm(){
-
                  var name=document.getElementById("name").value;
                  var guess=document.getElementById("guess").value;
+                 var ok=true;
+                 
+                 if(name==""){
+                    document.getElementById("massg-name").textContent="plz enter your name";
+                    document.getElementById("massg-name").style.color = "red";
+                    ok=false;
+                 }
+
+                 else{
+                    document.getElementById("massg-name").textContent = "great name";
+                     document.getElementById("massg-name").style.color = "green";
+                 }
+
+                 if(guess==""){
+                     document.getElementById("massg-guess").textContent = "plz enter a guess";
+                        document.getElementById("massg-guess").style.color = "red";
+                        ok = false;
+                    }
+
+                 else {
+                        document.getElementById("massg-guess").textContent = "nice guess";
+                        document.getElementById("massg-guess").style.color = "green";
+                    }
+
+                    if(ok==true){
+                        var lucky=Math.floor(Math.random()*5)+1;
+                        if(guess==lucky){
+
+                            document.getElementById("result").textContent="you win "+name+" the luckey number was"+ lucky;
+                            document.getElementById("result").style.color="green";
+                        }
+                        else {
+                           document.getElementById("result").textContent = "so close " + name + " the luckey number was" + lucky;
+                            document.getElementById("result").style.color = "red";
+
+                        }
+                    }
             }
         </script>
     </body>
